@@ -59,17 +59,6 @@ public class AmazonAutomationApplication
     }
     public static void checkout(WebDriver driver)
     {
-//        List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
-//        for (WebElement f : iframes)
-//        {
-//            System.out.println(f.getAttribute("name")+" "+f.getAttribute("id"));
-//        }
-//        driver.findElement(By.id("checkoutPrefetch"));
-//        driver.switchTo().frame("checkoutPrefetch");
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("checkoutPrefetch"));
-//        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"attach-sidesheet-checkout-button\"]/span/input")));
-//        driver.findElement(By.xpath("//*[@id=\"attach-sidesheet-checkout-button\"]/span/input")).click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         driver.findElement(By.xpath("//*[@id=\"nav-cart\"]")).click();
         driver.findElement(By.xpath("//*[@id=\"sc-buy-box-ptc-button\"]/span/input")).click();
